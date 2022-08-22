@@ -60,3 +60,6 @@ class LED:
         for i in range(start, end, inv):
             self.pwm_led.duty_u16(i)
             time.sleep(update_delay)
+
+    def deinit(self):
+        self.pwm_led.deinit()

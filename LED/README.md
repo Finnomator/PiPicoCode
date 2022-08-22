@@ -27,4 +27,6 @@ sleep(1)
 # The smaller update_delay is, the faster the LED will change in brightness
 led.value_gradient(mode=LED.INCREASE_DECREASE, update_delay=0.0001)
 
+led.deinit()
+
 ```
