@@ -12,8 +12,8 @@ Make sure to get the polarity right.
 
 ```python
 from Buzzer import ActiveBuzzer
-buz = ActiveBuzzer(15)
 
+buz = ActiveBuzzer(15)
 buz.beep_text_as_morse("Hello World!")
 ```
 
