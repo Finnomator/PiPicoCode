@@ -1,4 +1,4 @@
-# The *Ultrasonic Sencor* Class
+# The *Ultrasonic Sensor* Class
 
 In this example we will be using the HC-SR04 Ultrasonic Sensor.
 
