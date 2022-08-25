@@ -1,7 +1,7 @@
 import time
 from machine import Pin, PWM
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __author__ = "Finn Drünert"
 
 
@@ -54,9 +54,15 @@ class LED:
         elif mode > 3:
             raise Exception("Invalid mode")
 
-        start = 0 if mode == self.INCREASE else 65535
-        end = 65535 if mode == self.INCREASE else -1
-        inv = 1 if mode == self.INCREASE else -1
+        if self.INCREASE:
+            start = 0
+            end = 65536
+            inv = 1
+        else:
+            start = 65535
+            end = -1
+            inv = -1
+
         for i in range(start, end, inv):
             self.pwm_led.duty_u16(i)
             time.sleep(update_delay)
