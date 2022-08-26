@@ -10,7 +10,7 @@ class UltrasonicSensor:
         self,
         trigger_pin: int,
         echo_pin: int,
-        max_range_cm: int,
+        max_range_cm: float,
         trigger_input_signal_us: int = 10,
     ):
         self.trigger = Pin(trigger_pin, Pin.OUT, pull=None)
